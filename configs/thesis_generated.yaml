@@ -1,12 +1,12 @@
 bufferSize: 2048
 pages:
-- content: '<p> This is an audio quality survey for Vaclav Volhejn&apos;s Master thesis
-    on neural audio synthesis. The survey should take around 15 minutes. Please fill
-    out the survey in a quiet environment and use headphones. </p><p> There are several
-    questions. In each one, you will listen to a reference sound and then several
-    <i>conditions</i> (versions) of the same sound. Some of the conditions consist
-    of the reference sound <b>recreated using neural network models</b>. The goal
-    of this survey is to evaluate these models. </p><p> Please grade the <b>naturalness</b>
+- content: '<!-- version 2 --> <p> This is an audio quality survey for Vaclav Volhejn&apos;s
+    Master thesis on neural audio synthesis. The survey should take around 10-15 minutes.
+    Please fill out the survey in a quiet environment and use headphones. </p><p>
+    There are several questions. In each one, you will listen to a reference sound
+    and then several <i>conditions</i> (versions) of the same sound. Some of the conditions
+    consist of the reference sound <b>recreated using neural network models</b>. The
+    goal of this survey is to evaluate these models. </p><p> Please grade the <b>naturalness</b>
     of each condition compared to the reference. Your grades should reflect your subjective
     judgement of the quality level for each of the sound excerpts presented to you.
     There will be an example on the next page. </p>

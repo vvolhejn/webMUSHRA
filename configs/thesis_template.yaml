@@ -11,9 +11,10 @@ pages:
       id: first_page
       name: Welcome
       content: >
+        <!-- version 2 -->
         <p>
         This is an audio quality survey for Vaclav Volhejn&apos;s Master thesis on neural audio synthesis.
-        The survey should take around 15 minutes.
+        The survey should take around 10-15 minutes.
         Please fill out the survey in a quiet environment and use headphones.
         </p><p>
         There are several questions.
