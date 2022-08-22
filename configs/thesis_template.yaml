@@ -57,13 +57,13 @@ pages:
       enableLooping: true 
       createAnchor35: true
       createAnchor70: false
-      reference: audio/violin/sample_6_gt.wav
+      reference: audio/violin/sample_20_gt.wav
       stimuli:
-        0725-ddspae-2: audio/violin/sample_6_0725-ddspae-2.wav
-        0725-ddspae-cnn-1-rt: audio/violin/sample_6_0725-ddspae-cnn-1-rt.wav
-        0725-ddspae-cnn-1-rtq: audio/violin/sample_6_0725-ddspae-cnn-1-rtq.wav
-        0809-ddspae-cnn-5-rt: audio/violin/sample_6_0809-ddspae-cnn-5-rt.wav
-        0809-ddspae-cnn-5-rtq: audio/violin/sample_6_0809-ddspae-cnn-5-rtq.wav
+        0725-ddspae-2: audio/violin/sample_20_0725-ddspae-2.wav
+        0725-ddspae-cnn-1-rt: audio/violin/sample_20_0725-ddspae-cnn-1-rt.wav
+        0725-ddspae-cnn-1-rtq: audio/violin/sample_20_0725-ddspae-cnn-1-rtq.wav
+        0809-ddspae-cnn-5-rt: audio/violin/sample_20_0809-ddspae-cnn-5-rt.wav
+        0809-ddspae-cnn-5-rtq: audio/violin/sample_20_0809-ddspae-cnn-5-rtq.wav
     - DUMMY_VIOLIN
     - DUMMY_TRUMPET
     - type: generic
@@ -73,9 +73,9 @@ pages:
         <p>
         In each of the following questions, you will hear a reference sound played on a musical instrument (or a voice).
         Unlike in the previous section, the conditions you will hear are not supposed to recreate the original sound.
-        Instead, they are meant perform <i>timbre transfer</i>: to play the same melody in the sound of a different instrument.
-        You will be told which instrument is being recreated.
-        Please grade the samples on their naturalness, i.e. <b>to what extend they sound like the target instrument</b>.
+        Instead, they are meant perform <i>timbre transfer</i>: to play the same melody in the sound of a different instrument,
+        here a <b>violin</b>.
+        Please grade the samples on their naturalness, i.e. <b>to what extend they sound like a violin is playing</b>.
         </p>
         There will be an example on the next page.
     - type: mushra
@@ -102,14 +102,14 @@ pages:
         0809-ddspae-cnn-5-rt: audio/violin_tt/sample_2_0809-ddspae-cnn-5-rt.wav
         0809-ddspae-cnn-5-rtq: audio/violin_tt/sample_2_0809-ddspae-cnn-5-rtq.wav
     - DUMMY_VIOLIN_TT
-    - type: generic
-      id: timbre_transfer_trumpet_intro
-      name: Welcome
-      content: >
-        The following is another timbre transfer section.
-        The difference is that the conditions are supposed to sound like a <b>trumpet</b>.
-        Please grade the samples on their naturalness, i.e. to what extend they sound like a trumpet.
-    - DUMMY_TRUMPET_TT
+    # - type: generic
+    #   id: timbre_transfer_trumpet_intro
+    #   name: Welcome
+    #   content: >
+    #     The following is another timbre transfer section.
+    #     The difference is that the conditions are supposed to sound like a <b>trumpet</b>.
+    #     Please grade the samples on their naturalness, i.e. to what extend they sound like a trumpet.
+    # - DUMMY_TRUMPET_TT
     - type: finish
       name: Thank you
       content: Thank you for attending! Please fill out your details. These are only used for avoiding duplicates and will not be shared with anybody.
