@@ -29,7 +29,8 @@ input[type=number] {
 
 body {
   font-family: sans-serif,verdana,Helvetica,Arial;
-  text-align:center;
+  /* text-align:left; */
+  text-align: justify;
   background-repeat: repeat-x;
   background-position: 0 5em; 
   background-color: #EEE;
@@ -50,6 +51,8 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 	top: 0%; 
 	margin-top: 0px; 
 	padding: 0 7%;
+  max-width: 800px;
+  margin: auto;
 }
 
 
@@ -243,3 +246,6 @@ li{
 	margin-left:25%;
 }
 
+#page_header {
+  text-align: center;
+}

@@ -1,0 +1,152 @@
+testname: Neural Audio Synthesis Survey
+testId: vvolhejn_thesis
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: >
+        <p>
+        This is an audio quality survey for Vaclav Volhejn&apos;s Master thesis on neural audio synthesis.
+        The survey should take around 15 minutes.
+        Please fill out the survey in a quiet environment and use headphones.
+        </p><p>
+        There are several questions.
+        In each one, you will listen to a reference sound and then several <i>conditions</i> (versions) of the same sound.
+        Some of the conditions consist of the reference sound <b>recreated using neural network models</b>.
+        The goal of this survey is to evaluate these models.
+        </p><p>
+        Please grade the <b>naturalness</b> of each condition compared to the reference.
+        Your grades should reflect your subjective judgement of the quality level for each of the sound
+        excerpts presented to you.
+        There will be an example on the next page.
+        </p>
+    - type: mushra
+      id: trial1
+      name: Training
+      content: >
+        <p>
+        This example shows how to use our user interface.
+        You can listen to the reference sound using the Play button under Reference.
+        You can play the different conditions using their respective Play buttons.
+        You can also drag the horizontal slider to listen to specific parts of the sound.
+        </p><p>
+        While listening to a condition, drag its slider to grade its <b>naturalness</b>.
+        The grading scale is continuous from &quot;excellent&quot; to &quot;bad&quot;. A grade of 0 corresponds to the bottom
+        of the &quot;bad&quot; category, while a grade of 100 corresponds to the top of the &quot;excellent&quot; category.
+        Please grade all conditions.
+        </p><p>
+        In evaluating the sound excerpts, please note that you should not necessarily give a grade in the
+        &quot;bad&quot; category to the sound excerpt with the lowest quality in the test. However one or more
+        conditions must be given a grade of 100 because the unprocessed reference sound is included as one
+        of the conditions to be graded.
+        </p><p>
+        You may listen to the sounds in any order, any number of times.
+        Use the slider for each sound to indicate your opinion of its quality. When you are satisfied with
+        your grading of all sounds you should click on the "Next" button at the bottom of the
+        screen.
+        </p>
+        No grades given during this training example will be taken into account in the true tests.
+        The actual questions begin on the next page.
+      showWaveform: true
+      enableLooping: true 
+      createAnchor35: true
+      createAnchor70: false
+      reference: audio/violin/sample_6_gt.wav
+      stimuli:
+        0725-ddspae-2: audio/violin/sample_6_0725-ddspae-2.wav
+        0725-ddspae-cnn-1-rt: audio/violin/sample_6_0725-ddspae-cnn-1-rt.wav
+        0725-ddspae-cnn-1-rtq: audio/violin/sample_6_0725-ddspae-cnn-1-rtq.wav
+        0809-ddspae-cnn-5-rt: audio/violin/sample_6_0809-ddspae-cnn-5-rt.wav
+        0809-ddspae-cnn-5-rtq: audio/violin/sample_6_0809-ddspae-cnn-5-rtq.wav
+    - DUMMY_VIOLIN
+    - DUMMY_TRUMPET
+    - type: generic
+      id: timbre_transfer_intro
+      name: Timbre transfer
+      content: >
+        <p>
+        In each of the following questions, you will hear a reference sound played on a musical instrument (or a voice).
+        Unlike in the previous section, the conditions you will hear are not supposed to recreate the original sound.
+        Instead, they are meant perform <i>timbre transfer</i>: to play the same melody in the sound of a different instrument.
+        You will be told which instrument is being recreated.
+        Please grade the samples on their naturalness, i.e. <b>to what extend they sound like the target instrument</b>.
+        </p>
+        There will be an example on the next page.
+    - type: mushra
+      id: trial2
+      name: Timbre transfer
+      content: >
+        <p>
+        This is a training example for the timbre transfer section.
+        No grades given to it will be taken into account in the true tests.
+        </p><p>
+        <b>The conditions are supposed sound like a violin.</b><br>
+        Due to technical limitations, the reference sound is also included among the conditions.
+        You may leave it ungraded.
+        </p>
+      showWaveform: true
+      enableLooping: true 
+      createAnchor35: false
+      createAnchor70: false
+      reference: audio/violin_tt/sample_2_gt.wav
+      stimuli:
+        0725-ddspae-2: audio/violin_tt/sample_2_0725-ddspae-2.wav
+        0725-ddspae-cnn-1-rt: audio/violin_tt/sample_2_0725-ddspae-cnn-1-rt.wav
+        0725-ddspae-cnn-1-rtq: audio/violin_tt/sample_2_0725-ddspae-cnn-1-rtq.wav
+        0809-ddspae-cnn-5-rt: audio/violin_tt/sample_2_0809-ddspae-cnn-5-rt.wav
+        0809-ddspae-cnn-5-rtq: audio/violin_tt/sample_2_0809-ddspae-cnn-5-rtq.wav
+    - DUMMY_VIOLIN_TT
+    - type: generic
+      id: timbre_transfer_trumpet_intro
+      name: Welcome
+      content: >
+        The following is another timbre transfer section.
+        The difference is that the conditions are supposed to sound like a <b>trumpet</b>.
+        Please grade the samples on their naturalness, i.e. to what extend they sound like a trumpet.
+    - DUMMY_TRUMPET_TT
+    - type: finish
+      name: Thank you
+      content: Thank you for attending! Please fill out your details. These are only used for avoiding duplicates and will not be shared with anybody.
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: First name
+            name: firstname
+          - type: text
+            label: Last name
+            name: lastname
+          - type: text
+            label: E-mail
+            name: email
+          - type: text
+            label: ETH username (if applicable - if not, please enter &quot;-&quot;)
+            name: ethusername
+          - type: likert
+            name: musical-instruments
+            label: Do you play any musical instruments?
+            response:
+             - value: a
+               label: I don't play any musical instrument.
+             - value: b
+               label: In the musical instrument I can play the best, I am a beginner.
+             - value: c
+               label: In the musical instrument I can play the best, I am intermediate.
+             - value: d
+               label: In the musical instrument I can play the best, I am advanced or a professional.
+          - type: likert
+            name: other-audio
+            label: How much experience do you have with any other type of working with sound, e.g. mixing, mastering, music production, or audio-related research?
+            response:
+             - value: a
+               label: No experience.
+             - value: b
+               label: Some experience.
+             - value: c
+               label: Extensive or professional experience.
